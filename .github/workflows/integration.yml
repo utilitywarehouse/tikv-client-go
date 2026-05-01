@@ -12,15 +12,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Harden the runner (Audit all outbound calls)
-        uses: step-security/harden-runner@v2
+        uses: step-security/harden-runner@8d3c67de8e2fe68ef647c8db1e6a09f647780f40 # v2.19.0
         with:
           egress-policy: audit
 
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2.7.0
 
       - name: Set up Go
-        uses: actions/setup-go@v4
+        uses: actions/setup-go@7b8cf10d4e4a01d4992d18a89f4d7dc5a3e6d6f4 # v4.3.0
         with:
           go-version: 1.21.0
 
@@ -32,15 +32,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Harden the runner (Audit all outbound calls)
-        uses: step-security/harden-runner@v2
+        uses: step-security/harden-runner@8d3c67de8e2fe68ef647c8db1e6a09f647780f40 # v2.19.0
         with:
           egress-policy: audit
 
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2.7.0
 
       - name: Set up Go
-        uses: actions/setup-go@v4
+        uses: actions/setup-go@7b8cf10d4e4a01d4992d18a89f4d7dc5a3e6d6f4 # v4.3.0
         with:
           go-version: 1.21.0
 
@@ -52,27 +52,27 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Harden the runner (Audit all outbound calls)
-        uses: step-security/harden-runner@v2
+        uses: step-security/harden-runner@8d3c67de8e2fe68ef647c8db1e6a09f647780f40 # v2.19.0
         with:
           egress-policy: audit
 
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2.7.0
 
       - name: Set up Go
-        uses: actions/setup-go@v4
+        uses: actions/setup-go@7b8cf10d4e4a01d4992d18a89f4d7dc5a3e6d6f4 # v4.3.0
         with:
           go-version: 1.21.0
 
       - name: Fetch PD
-        uses: shrink/actions-docker-extract@v1
+        uses: shrink/actions-docker-extract@7d86f1b9adc7afe4a64e13fb425872a547d6afa3 # v1.0.3
         id: extract-pd
         with:
           image: pingcap/pd:nightly
           path: /pd-server
 
       - name: Fetch TiKV
-        uses: shrink/actions-docker-extract@v1
+        uses: shrink/actions-docker-extract@7d86f1b9adc7afe4a64e13fb425872a547d6afa3 # v1.0.3
         id: extract-tikv
         with:
           image: pingcap/tikv:nightly
@@ -99,27 +99,27 @@ jobs:
         api_version: [v1ttl, v2]
     steps:
       - name: Harden the runner (Audit all outbound calls)
-        uses: step-security/harden-runner@v2
+        uses: step-security/harden-runner@8d3c67de8e2fe68ef647c8db1e6a09f647780f40 # v2.19.0
         with:
           egress-policy: audit
 
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2.7.0
 
       - name: Set up Go
-        uses: actions/setup-go@v4
+        uses: actions/setup-go@7b8cf10d4e4a01d4992d18a89f4d7dc5a3e6d6f4 # v4.3.0
         with:
           go-version: 1.21.0
 
       - name: Fetch PD
-        uses: shrink/actions-docker-extract@v1
+        uses: shrink/actions-docker-extract@7d86f1b9adc7afe4a64e13fb425872a547d6afa3 # v1.0.3
         id: extract-pd
         with:
           image: pingcap/pd:nightly
           path: /pd-server
 
       - name: Fetch TiKV
-        uses: shrink/actions-docker-extract@v1
+        uses: shrink/actions-docker-extract@7d86f1b9adc7afe4a64e13fb425872a547d6afa3 # v1.0.3
         id: extract-tikv
         with:
           image: pingcap/tikv:nightly
